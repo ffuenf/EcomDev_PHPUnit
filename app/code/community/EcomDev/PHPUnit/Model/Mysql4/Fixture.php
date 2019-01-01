@@ -97,6 +97,9 @@ class EcomDev_PHPUnit_Model_Mysql4_Fixture extends Mage_Core_Model_Mysql4_Abstra
 
         // Populate table records with data
         foreach ($tableColumns as $columnName => $definition) {
+            if ($definition['GENERATED']) {
+                continue;
+            }
             if (isset($row[$columnName])) {
                 $record[$columnName] = $this->_getTableRecordValue($row[$columnName]);
             } elseif ($definition['DEFAULT'] !== null) {
