@@ -1,5 +1,5 @@
 <?php
-
+use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 class EcomDev_PHPUnit_Model_Expectation
     implements EcomDev_PHPUnit_Model_ExpectationInterface
 {
