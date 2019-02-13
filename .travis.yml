@@ -4,11 +4,6 @@ php:
 env:
   - MAGENTO_VERSION=magento-mirror-1.9.2.4
 
-install:
-  - wget https://raw.githubusercontent.com/colinmollenhour/modman/master/modman
-  - chmod +x modman
-  - ./modman init
-
 before_install:
   - mkdir test-root/
 
