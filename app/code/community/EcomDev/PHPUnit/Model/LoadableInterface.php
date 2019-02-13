@@ -16,6 +16,8 @@
  * @author     Ivan Chepurnyi <ivan.chepurnyi@ecomdev.org>
  */
 
+use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
+
 /**
  * Interface for loadable test environment data
  *

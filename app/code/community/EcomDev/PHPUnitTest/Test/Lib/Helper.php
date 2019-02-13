@@ -18,7 +18,7 @@
  */
 
 use EcomDev_PHPUnit_Helper as Helper;
-
+use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 class EcomDev_PHPUnitTest_Test_Lib_Helper extends PHPUnit_Framework_TestCase
 {
     /**

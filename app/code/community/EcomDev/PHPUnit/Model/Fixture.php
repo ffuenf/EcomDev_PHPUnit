@@ -17,6 +17,8 @@
  */
 
 
+use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
+
 /**
  * Fixture model for Magento unit tests
  *

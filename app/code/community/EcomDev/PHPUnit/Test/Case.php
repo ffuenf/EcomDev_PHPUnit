@@ -18,6 +18,7 @@
 
 use EcomDev_PHPUnit_Test_Case_Util as TestUtil;
 use EcomDev_PHPUnit_Helper as TestHelper;
+use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
 /**
  * Basic test case class, implements test helpers for easy working with Magento
