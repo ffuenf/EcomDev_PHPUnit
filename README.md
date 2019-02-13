@@ -9,9 +9,9 @@ This extension was created especially for resolving this problem and promoting t
 
 System Requirements
 -------------------
-* PHP 5.3 or higher
-* PHPUnit 3.7.x
-* Magento CE1.4.x-1.7.x/PE1.9.x-PE1.10.x/EE1.9.x-1.12.x
+* PHP 7.2 or higher
+* PHPUnit 8.x
+* Magento CE 1.9.2.4
 
 Build Status
 ------------
@@ -45,7 +45,7 @@ Installation
       }
       ```
 
-3. Open your terminal and navigate to your magento directory for performing the following command, they are required to configure system for running the test suite 
+2. Open your terminal and navigate to your magento directory for performing the following command, they are required to configure system for running the test suite 
     ```bash
     # Shell scripts needs to be run from this directory
     cd $YOUR_MAGENTO_DIRECTORY/shell 
@@ -57,11 +57,11 @@ Installation
     php ecomdev-phpunit.php -a fix-autoloader
     ```
 
-4. Run the unit tests first time for installing test database. It will take about 3 minutes.
+3. Run the unit tests first time for installing test database. It will take about 3 minutes.
 
         $ phpunit 
 
-5. If it shows that there was no tests found, it means that extension was successfully installed. If it shows some errors, then it means, that your customizations has install scripts that relay on your current database data and you should fix them. Or use your dev database as a base for the tests, but prior first time running the suite.
+4. If it shows that there was no tests found, it means that extension was successfully installed. If it shows some errors, then it means, that your customizations has install scripts that relay on your current database data and you should fix them. Or use your dev database as a base for the tests, but prior first time running the suite.
 
 
 Issue Tracker
