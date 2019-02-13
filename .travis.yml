@@ -11,7 +11,7 @@ before_script:
   # Installing dependencies
   - composer install --dev
   # Copying phpunit.xml for travis builds
-  - cp .travis/phpunit.xml $MAGE_DIR/phpunit.xml
+  - cp .travis/phpunit.xml phpunit.xml
 script:
   # output php ini info for checking the problem
   - vendor/bin/phpunit
