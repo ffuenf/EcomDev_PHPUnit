@@ -12,9 +12,9 @@
          strict="false"
          verbose="false"
          bootstrap="app/code/community/EcomDev/PHPUnit/bootstrap.php">
-   <listeners>
+   <!-- <listeners>
        <listener file="app/code/community/EcomDev/PHPUnit/Test/Listener.php" class="EcomDev_PHPUnit_Test_Listener" />
-   </listeners>
+   </listeners> -->
    <testsuite name="Magento Test Suite">
         <file>app/code/community/EcomDev/PHPUnit/Test/Suite.php</file>
    </testsuite>
