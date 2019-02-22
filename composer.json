@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "require-dev": {
         "phpunit/phpunit": "^8",
         "phpmd/phpmd": "*",
@@ -6,3 +7,13 @@
         "satooshi/php-coveralls": "*"
     }
 }
+=======
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*",
+        "phpunit/phpunit": "^8"
+    },
+    "replace": {
+        "ivanchepurnyi/ecomdev_phpunit":"*"
+    }
+}
+>>>>>>> bata-php7.2
