@@ -1,13 +1,4 @@
 {
-<<<<<<< HEAD
-    "require-dev": {
-        "phpunit/phpunit": "^8",
-        "phpmd/phpmd": "*",
-        "squizlabs/php_codesniffer": "*",
-        "satooshi/php-coveralls": "*"
-    }
-}
-=======
     "require": {
         "magento-hackathon/magento-composer-installer": "*",
         "phpunit/phpunit": "^8"
@@ -16,4 +7,3 @@
         "ivanchepurnyi/ecomdev_phpunit":"*"
     }
 }
->>>>>>> bata-php7.2
