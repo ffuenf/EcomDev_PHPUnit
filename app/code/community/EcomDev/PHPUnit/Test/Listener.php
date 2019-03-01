@@ -18,7 +18,7 @@
 
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
-class EcomDev_PHPUnit_Test_Listener implements PHPUnit_Framework_TestListener
+abstract class EcomDev_PHPUnit_Test_Listener implements PHPUnit_Framework_TestListener
 {
     const XML_PATH_UNIT_TEST_APP = 'phpunit/suite/app/class';
 
