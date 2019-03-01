@@ -215,5 +215,17 @@ class EcomDev_PHPUnit_Mock_Proxy
         );
     }
 
-    
+    /**
+     * @return bool
+     */
+    public function __phpunit_hasMatchers()
+    {
+        throw new RuntimeException('Mock object proxy does not have "__phpunit_hasMatchers" method.');
+    }
+
+    public function method($constraint)
+    {
+        throw new RuntimeException('Mock object proxy does not have "method" method.');
+    }
+
 }
