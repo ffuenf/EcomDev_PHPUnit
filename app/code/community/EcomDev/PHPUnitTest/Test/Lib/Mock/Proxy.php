@@ -15,8 +15,8 @@
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @author     Ivan Chepurnyi <ivan.chepurnyi@ecomdev.org>
  */
-
-class EcomDev_PHPUnitTest_Test_Lib_Mock_Proxy extends PHPUnit\Framework\TestCase
+use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
+class EcomDev_PHPUnitTest_Test_Lib_Mock_Proxy extends PHPUnit_Framework_TestCase
 {
     /**
      * @var EcomDev_PHPUnit_Mock_Proxy
@@ -72,7 +72,7 @@ class EcomDev_PHPUnitTest_Test_Lib_Mock_Proxy extends PHPUnit\Framework\TestCase
         $mockInstance = $this->mockProxy->getMockInstance();
 
         $this->assertInstanceOf(
-            'PHPUnit\Framework\MockObject_MockObject',
+            'PHPUnit_Framework_MockObject_MockObject',
             $mockInstance
         );
 
@@ -96,7 +96,7 @@ class EcomDev_PHPUnitTest_Test_Lib_Mock_Proxy extends PHPUnit\Framework\TestCase
     {
         $this->assertAttributeEmpty('mockInstance', $this->mockProxy);
         $this->assertInstanceOf(
-            'PHPUnit\Framework\MockObject_Builder_InvocationMocker',
+            'PHPUnit_Framework_MockObject_Builder_InvocationMocker',
             $this->mockProxy->expects($this->any())->method('compareValues')
         );
         $this->assertAttributeInstanceOf('EcomDev_PHPUnit_AbstractConstraint', 'mockInstance', $this->mockProxy);

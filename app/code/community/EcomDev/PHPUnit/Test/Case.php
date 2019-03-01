@@ -18,6 +18,7 @@
 
 use EcomDev_PHPUnit_Test_Case_Util as TestUtil;
 use EcomDev_PHPUnit_Helper as TestHelper;
+use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
 /**
  * Basic test case class, implements test helpers for easy working with Magento
@@ -82,20 +83,6 @@ abstract class EcomDev_PHPUnit_Test_Case extends PHPUnit\Framework\TestCase
         return TestUtil::app();
     }
 
-    /**
-     * Returns a EcomDev_PHPUnit_Constraint_Or matcher object.
-     *
-     * @return EcomDev_PHPUnit_Constraint_Or
-     */
-    public static function logicalOr()
-    {
-        $constraints = func_get_args();
-
-        $constraint = new EcomDev_PHPUnit_Constraint_Or;
-        $constraint->setConstraints($constraints);
-
-        return $constraint;
-    }
 
     /**
      * Asserts that event was dispatched at least once
@@ -170,18 +157,6 @@ abstract class EcomDev_PHPUnit_Test_Case extends PHPUnit\Framework\TestCase
     }
 
     /**
-     * Creates a constraint for checking that string is valid JSON
-     *
-     * @return EcomDev_PHPUnit_Constraint_Json
-     */
-    public static function isJson()
-    {
-        return new EcomDev_PHPUnit_Constraint_Json(
-            EcomDev_PHPUnit_Constraint_Json::TYPE_VALID
-        );
-    }
-
-    /**
      * Creates a constraint for checking that string
      * is matched expected JSON structure
      *
@@ -196,17 +171,6 @@ abstract class EcomDev_PHPUnit_Test_Case extends PHPUnit\Framework\TestCase
             $expectedValue,
             $matchType
         );
-    }
-
-    /**
-     * Assert that string is a valid JSON
-     *
-     * @param string $string
-     * @param string $message
-     */
-    public static function assertJson($string, $message = '')
-    {
-        self::assertThat($string, self::isJson(), $message);
     }
 
     /**

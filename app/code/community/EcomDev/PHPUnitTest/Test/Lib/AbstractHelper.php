@@ -15,13 +15,13 @@
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @author     Ivan Chepurnyi <ivan.chepurnyi@ecomdev.org>
  */
-
-class EcomDev_PHPUnitTest_Test_Lib_AbstractHelper extends PHPUnit\Framework\TestCase
+use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
+class EcomDev_PHPUnitTest_Test_Lib_AbstractHelper extends PHPUnit_Framework_TestCase
 {
     /**
      *
      *
-     * @var EcomDev_PHPUnit_AbstractHelper|PHPUnit\Framework\MockObject_MockObject
+     * @var EcomDev_PHPUnit_AbstractHelper|PHPUnit_Framework_MockObject_MockObject
      */
     protected $helper = null;
 
@@ -46,7 +46,7 @@ class EcomDev_PHPUnitTest_Test_Lib_AbstractHelper extends PHPUnit\Framework\Test
         foreach ($map as $method => $result) {
             $stubMap[] = array($method, $result !== false);
 
-            if ($result instanceof PHPUnit\Framework\MockObject_Stub) {
+            if ($result instanceof PHPUnit_Framework_MockObject_Stub) {
                 $stubResult[$method] = $result;
             }
         }
@@ -59,7 +59,7 @@ class EcomDev_PHPUnitTest_Test_Lib_AbstractHelper extends PHPUnit\Framework\Test
         $this->helper->expects($this->any())
             ->method('callMethod')
             ->will($this->returnCallback(function ($method, array $args) use ($helper, $stubResult) {
-                $invocation = new PHPUnit\Framework\MockObject_Invocation_Object(
+                $invocation = new PHPUnit_Framework_MockObject_Invocation_Object(
                     get_class($helper), $method, $args, $helper
                 );
                 return $stubResult[$method]->invoke($invocation);

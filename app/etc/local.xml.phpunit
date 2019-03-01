@@ -4,7 +4,7 @@
         <resources>
             <default_setup>
                 <connection>
-                    <dbname><![CDATA[magento_unit_tests]]></dbname>
+                    <dbname><![CDATA[magento]]></dbname>
                 </connection>
             </default_setup>
         </resources>

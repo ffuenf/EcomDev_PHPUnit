@@ -17,7 +17,7 @@
  */
 
 use EcomDev_PHPUnit_Helper as TestHelper;
-
+use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 class EcomDev_PHPUnit_Test_Case_Util
 {
     const XML_PATH_DEFAULT_FIXTURE_MODEL = 'phpunit/suite/fixture/model';

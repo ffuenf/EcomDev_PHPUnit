@@ -21,7 +21,7 @@
  * Test suite for a group of tests (e.g. tests from the same class)
  *
  */
-class EcomDev_PHPUnit_Test_Suite_Group extends PHPUnit\Framework\TestSuite
+class EcomDev_PHPUnit_Test_Suite_Group extends PHPUnit_Framework_TestSuite
 {
     const NO_GROUP_KEYWORD = '__nogroup__';
 
@@ -36,7 +36,7 @@ class EcomDev_PHPUnit_Test_Suite_Group extends PHPUnit\Framework\TestSuite
      * Constructor adds test groups defined on global level
      * and adds additional logic for test names retrieval
      *
-     * @see PHPUnit\Framework\TestSuite::__construct()
+     * @see PHPUnit_Framework_TestSuite::__construct()
      */
     public function __construct($theClass = '', $groups = array())
     {
@@ -62,7 +62,7 @@ class EcomDev_PHPUnit_Test_Suite_Group extends PHPUnit\Framework\TestSuite
         }
 
         foreach ($this->tests() as $test) {
-            if ($test instanceof PHPUnit\Framework\TestSuite) {
+            if ($test instanceof PHPUnit_Framework_TestSuite) {
                 /* @todo
                  * Post an issue into PHPUnit bugtracker for
                  * impossibility for specifying group by parent test case
@@ -92,15 +92,5 @@ class EcomDev_PHPUnit_Test_Suite_Group extends PHPUnit\Framework\TestSuite
         if (isset($this->groups[self::NO_GROUP_KEYWORD])) {
             unset($this->groups[self::NO_GROUP_KEYWORD]);
         }
-    }
-
-    /**
-     * Outputs test suite name from annotations
-     *
-     * @see PHPUnit\Framework\TestSuite::toString()
-     */
-    public function toString()
-    {
-        return $this->suiteName !== null ?  $this->suiteName : $this->name;
     }
 }

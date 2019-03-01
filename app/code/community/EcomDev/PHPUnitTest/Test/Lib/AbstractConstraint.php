@@ -1,6 +1,6 @@
 <?php
-
-class EcomDev_PHPUnitTest_Test_Lib_AbstractConstraint extends PHPUnit\Framework\TestCase
+use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
+class EcomDev_PHPUnitTest_Test_Lib_AbstractConstraint extends PHPUnit_Framework_TestCase
 {
     /**
      * Test compare values functionality for constraint
