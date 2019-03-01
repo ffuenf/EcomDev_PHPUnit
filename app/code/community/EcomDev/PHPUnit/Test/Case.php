@@ -33,7 +33,7 @@ use EcomDev_PHPUnit_Helper as TestHelper;
  * @method EcomDev_PHPUnit_Mock_Proxy guestSession()
  * @method Varien_Event_Observer generateObserver(array $eventData, string $eventName = null)
  */
-abstract class EcomDev_PHPUnit_Test_Case extends PHPUnit_Framework_TestCase
+abstract class EcomDev_PHPUnit_Test_Case extends PHPUnit\Framework\TestCase
 {
 
     /**
@@ -334,7 +334,7 @@ abstract class EcomDev_PHPUnit_Test_Case extends PHPUnit_Framework_TestCase
      *
      * @param string $type
      * @param string $classAlias
-     * @param PHPUnit_Framework_MockObject_MockObject|PHPUnit_Framework_MockObject_MockBuilder $mock
+     * @param PHPUnit\Framework\MockObject_MockObject|PHPUnit\Framework\MockObject_MockBuilder $mock
      * @return $this
      */
     protected function replaceByMock($type, $classAlias, $mock)
@@ -554,7 +554,7 @@ abstract class EcomDev_PHPUnit_Test_Case extends PHPUnit_Framework_TestCase
      * @param  boolean $callOriginalConstructor
      * @param  boolean $callOriginalClone
      * @param  boolean $callAutoload
-     * @return PHPUnit_Framework_MockObject_MockObject
+     * @return PHPUnit\Framework\MockObject_MockObject
      */
     public function getGroupedClassMock($type, $classAlias, $methods = array(), $isAbstract = false,
                                         array $constructorArguments = array(),

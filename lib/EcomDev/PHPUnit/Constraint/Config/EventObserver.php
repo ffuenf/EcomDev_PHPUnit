@@ -77,7 +77,7 @@ class EcomDev_PHPUnit_Constraint_Config_EventObserver
      * @param string $observerMethod
      * @param string $type
      * @param string|null $observerName
-     * @throws PHPUnit_Framework_Exception
+     * @throws PHPUnit\Framework\Exception
      */
     public function __construct($area, $eventName, $observerClassAlias, $observerMethod, $type = self::TYPE_DEFINED, $observerName = null)
     {
@@ -166,7 +166,7 @@ class EcomDev_PHPUnit_Constraint_Config_EventObserver
     /**
      * Custom failure description for showing config related errors
      * (non-PHPdoc)
-     * @see PHPUnit_Framework_Constraint::customFailureDescription()
+     * @see PHPUnit\Framework\Constraint::customFailureDescription()
      */
     protected function customFailureDescription($other)
     {

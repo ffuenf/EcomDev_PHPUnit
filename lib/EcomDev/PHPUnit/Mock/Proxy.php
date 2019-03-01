@@ -24,8 +24,8 @@ use EcomDev_Utils_Reflection as ReflectionUtil;
  * Used to support mock builder auto-apply as soon as expects method is called.
  */
 class EcomDev_PHPUnit_Mock_Proxy
-    extends PHPUnit_Framework_MockObject_MockBuilder
-    implements PHPUnit_Framework_MockObject_MockObject
+    extends PHPUnit\Framework\MockObject_MockBuilder
+    implements PHPUnit\Framework\MockObject_MockObject
 {
     protected $mockInstance;
 
@@ -39,11 +39,11 @@ class EcomDev_PHPUnit_Mock_Proxy
     /**
      * Added class alias as property
      * 
-     * @param PHPUnit_Framework_TestCase $testCase
+     * @param PHPUnit\Framework\TestCase $testCase
      * @param array|string $type
      * @param null $classAlias
      */
-    public function __construct(PHPUnit_Framework_TestCase $testCase, $type, $classAlias = null)
+    public function __construct(PHPUnit\Framework\TestCase $testCase, $type, $classAlias = null)
     {
         parent::__construct($testCase, $type);
         $this->classAlias = $classAlias;
@@ -95,7 +95,7 @@ class EcomDev_PHPUnit_Mock_Proxy
     /**
      * Proxied mock instance retrieval
      *
-     * @return PHPUnit_Framework_MockObject_MockObject
+     * @return PHPUnit\Framework\MockObject_MockObject
      */
     public function getMockInstance()
     {
@@ -125,10 +125,10 @@ class EcomDev_PHPUnit_Mock_Proxy
      * Registers a new expectation in the mock object and returns the match
      * object which can be infused with further details.
      *
-     * @param  PHPUnit_Framework_MockObject_Matcher_Invocation $matcher
-     * @return PHPUnit_Framework_MockObject_Builder_InvocationMocker
+     * @param  PHPUnit\Framework\MockObject_Matcher_Invocation $matcher
+     * @return PHPUnit\Framework\MockObject_Builder_InvocationMocker
      */
-    public function expects(PHPUnit_Framework_MockObject_Matcher_Invocation $matcher)
+    public function expects(PHPUnit\Framework\MockObject_Matcher_Invocation $matcher)
     {
         return $this->getMockInstance()->expects($matcher);
     }
@@ -149,7 +149,7 @@ class EcomDev_PHPUnit_Mock_Proxy
      * Returns invocation mocker for
      *
      * @throws RuntimeException
-     * @return PHPUnit_Framework_MockObject_InvocationMocker
+     * @return PHPUnit\Framework\MockObject_InvocationMocker
      */
     public function __phpunit_getInvocationMocker()
     {
@@ -163,7 +163,7 @@ class EcomDev_PHPUnit_Mock_Proxy
      * Returns static invocation mocker
      *
      * @throws RuntimeException
-     * @return PHPUnit_Framework_MockObject_InvocationMocker
+     * @return PHPUnit\Framework\MockObject_InvocationMocker
      */
     public static function __phpunit_getStaticInvocationMocker()
     {
@@ -175,7 +175,7 @@ class EcomDev_PHPUnit_Mock_Proxy
 
     /**
      * @param $originalObject
-     * @return PHPUnit_Framework_MockObject_InvocationMocker
+     * @return PHPUnit\Framework\MockObject_InvocationMocker
      * @since  Method available since Release 2.0.0
      */
     public function __phpunit_setOriginalObject($originalObject)
@@ -190,7 +190,7 @@ class EcomDev_PHPUnit_Mock_Proxy
      * Verifies that the current expectation is valid. If everything is OK the
      * code should just return, if not it must throw an exception.
      *
-     * @throws PHPUnit_Framework_ExpectationFailedException
+     * @throws PHPUnit\Framework\ExpectationFailedException
      */
     public function __phpunit_verify()
     {

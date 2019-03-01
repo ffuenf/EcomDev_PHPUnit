@@ -65,7 +65,7 @@ class EcomDev_PHPUnit_Constraint_Config_Resource_Script
      * @param string $moduleDirectory
      * @param null|string $resourceName
      * @param null|string $expectedVersions
-     * @throws PHPUnit_Framework_Exception
+     * @throws PHPUnit\Framework\Exception
      * @internal param string $nodePath
      * @internal param mixed $expectedValue
      */
@@ -363,7 +363,7 @@ class EcomDev_PHPUnit_Constraint_Config_Resource_Script
     /**
      * Custom failure description for showing config related errors
      * (non-PHPdoc)
-     * @see PHPUnit_Framework_Constraint::customFailureDescription()
+     * @see PHPUnit\Framework\Constraint::customFailureDescription()
      */
     protected function customFailureDescription($other)
     {

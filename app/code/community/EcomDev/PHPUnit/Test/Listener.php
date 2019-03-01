@@ -16,7 +16,7 @@
  * @author     Ivan Chepurnyi <ivan.chepurnyi@ecomdev.org>
  */
 
-class EcomDev_PHPUnit_Test_Listener implements PHPUnit_Framework_TestListener
+class EcomDev_PHPUnit_Test_Listener implements PHPUnit\Framework\TestListener
 {
     const XML_PATH_UNIT_TEST_APP = 'phpunit/suite/app/class';
 
@@ -24,7 +24,7 @@ class EcomDev_PHPUnit_Test_Listener implements PHPUnit_Framework_TestListener
      * First level test suite that is used
      * for running all the tests
      *
-     * @var PHPUnit_Framework_TestSuite
+     * @var PHPUnit\Framework\TestSuite
      */
     protected $firstLevelTestSuite = null;
 
@@ -44,9 +44,9 @@ class EcomDev_PHPUnit_Test_Listener implements PHPUnit_Framework_TestListener
     /**
      * A test suite started.
      *
-     * @param  PHPUnit_Framework_TestSuite $suite
+     * @param  PHPUnit\Framework\TestSuite $suite
      */
-    public function startTestSuite(PHPUnit_Framework_TestSuite $suite)
+    public function startTestSuite(PHPUnit\Framework\TestSuite $suite)
     {
         if ($this->firstLevelTestSuite === null) {
             Mage::dispatchEvent('phpunit_suite_start_before', array(
@@ -94,9 +94,9 @@ class EcomDev_PHPUnit_Test_Listener implements PHPUnit_Framework_TestListener
     /**
      * A test suite ended.
      *
-     * @param  PHPUnit_Framework_TestSuite $suite
+     * @param  PHPUnit\Framework\TestSuite $suite
      */
-    public function endTestSuite(PHPUnit_Framework_TestSuite $suite)
+    public function endTestSuite(PHPUnit\Framework\TestSuite $suite)
     {
         if (EcomDev_Utils_Reflection::getRestrictedPropertyValue($suite, 'testCase')) {
             Mage::dispatchEvent('phpunit_test_case_end_before', array(
@@ -132,15 +132,15 @@ class EcomDev_PHPUnit_Test_Listener implements PHPUnit_Framework_TestListener
     /**
      * A test started.
      *
-     * @param  PHPUnit_Framework_Test $test
+     * @param  PHPUnit\Framework\Test $test
      */
-    public function startTest(PHPUnit_Framework_Test $test)
+    public function startTest(PHPUnit\Framework\Test $test)
     {
         Mage::dispatchEvent('phpunit_test_start_before', array(
             'test' => $test,
             'listener' => $this
         ));
-        if ($test instanceof PHPUnit_Framework_TestCase) {
+        if ($test instanceof PHPUnit\Framework\TestCase) {
             EcomDev_PHPUnit_Helper::setTestCase($test);
             EcomDev_PHPUnit_Test_Case_Util::getFixture(get_class($test))
                 ->setScope(EcomDev_PHPUnit_Model_FixtureInterface::SCOPE_LOCAL)
@@ -162,17 +162,17 @@ class EcomDev_PHPUnit_Test_Listener implements PHPUnit_Framework_TestListener
     /**
      * A test ended.
      *
-     * @param  PHPUnit_Framework_Test $test
+     * @param  PHPUnit\Framework\Test $test
      * @param  float                  $time
      */
-    public function endTest(PHPUnit_Framework_Test $test, $time)
+    public function endTest(PHPUnit\Framework\Test $test, $time)
     {
         Mage::dispatchEvent('phpunit_test_end_before', array(
             'test' => $test,
             'listener' => $this
         ));
 
-        if ($test instanceof PHPUnit_Framework_TestCase) {
+        if ($test instanceof PHPUnit\Framework\TestCase) {
             EcomDev_PHPUnit_Helper::tearDown();
             EcomDev_PHPUnit_Test_Case_Util::tearDown();
             
@@ -194,11 +194,11 @@ class EcomDev_PHPUnit_Test_Listener implements PHPUnit_Framework_TestListener
     /**
      * An error occurred.
      *
-     * @param  PHPUnit_Framework_Test $test
+     * @param  PHPUnit\Framework\Test $test
      * @param  Exception              $e
      * @param  float                  $time
      */
-    public function addError(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addError(PHPUnit\Framework\Test $test, Exception $e, $time)
     {
         Mage::dispatchEvent('phpunit_test_error', array(
             'test' => $test,
@@ -212,11 +212,11 @@ class EcomDev_PHPUnit_Test_Listener implements PHPUnit_Framework_TestListener
     /**
      * A failure occurred.
      *
-     * @param  PHPUnit_Framework_Test                 $test
-     * @param  PHPUnit_Framework_AssertionFailedError $e
+     * @param  PHPUnit\Framework\Test                 $test
+     * @param  PHPUnit\Framework\AssertionFailedError $e
      * @param  float                                  $time
      */
-    public function addFailure(PHPUnit_Framework_Test $test, PHPUnit_Framework_AssertionFailedError $e, $time)
+    public function addFailure(PHPUnit\Framework\Test $test, PHPUnit\Framework\AssertionFailedError $e, $time)
     {
         Mage::dispatchEvent('phpunit_test_failure', array(
             'test' => $test,
@@ -230,11 +230,11 @@ class EcomDev_PHPUnit_Test_Listener implements PHPUnit_Framework_TestListener
     /**
      * Incomplete test.
      *
-     * @param  PHPUnit_Framework_Test $test
+     * @param  PHPUnit\Framework\Test $test
      * @param  Exception              $e
      * @param  float                  $time
      */
-    public function addIncompleteTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addIncompleteTest(PHPUnit\Framework\Test $test, Exception $e, $time)
     {
         Mage::dispatchEvent('phpunit_test_incomplete', array(
             'test' => $test,
@@ -248,11 +248,11 @@ class EcomDev_PHPUnit_Test_Listener implements PHPUnit_Framework_TestListener
     /**
      * Skipped test.
      *
-     * @param  PHPUnit_Framework_Test $test
+     * @param  PHPUnit\Framework\Test $test
      * @param  Exception              $e
      * @param  float                  $time
      */
-    public function addSkippedTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addSkippedTest(PHPUnit\Framework\Test $test, Exception $e, $time)
     {
         Mage::dispatchEvent('phpunit_test_skipped', array(
             'test' => $test,
@@ -267,12 +267,12 @@ class EcomDev_PHPUnit_Test_Listener implements PHPUnit_Framework_TestListener
     /**
      * Risky test.
      *
-     * @param PHPUnit_Framework_Test $test
+     * @param PHPUnit\Framework\Test $test
      * @param Exception $e
      * @param float $time
      * @since  Method available since Release 4.0.0
      */
-    public function addRiskyTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addRiskyTest(PHPUnit\Framework\Test $test, Exception $e, $time)
     {
         Mage::dispatchEvent('phpunit_test_risky', array(
             'test' => $test,

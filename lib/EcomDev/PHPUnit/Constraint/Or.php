@@ -19,7 +19,7 @@
 /**
  * Fix of comparison type for Or constraint
  */
-class EcomDev_PHPUnit_Constraint_Or extends PHPUnit_Framework_Constraint_Or
+class EcomDev_PHPUnit_Constraint_Or extends PHPUnit\Framework\Constraint_Or
 {
     protected function failureDescription($other)
     {

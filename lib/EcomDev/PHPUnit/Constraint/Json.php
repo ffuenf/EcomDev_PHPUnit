@@ -155,7 +155,7 @@ class EcomDev_PHPUnit_Constraint_Json extends EcomDev_PHPUnit_AbstractConstraint
     /**
      * Custom failure description for showing json related errors
      * (non-PHPdoc)
-     * @see PHPUnit_Framework_Constraint::customFailureDescription()
+     * @see PHPUnit\Framework\Constraint::customFailureDescription()
      */
     protected function customFailureDescription($other, $description, $not)
     {

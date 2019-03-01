@@ -16,7 +16,7 @@
  * @author     Ivan Chepurnyi <ivan.chepurnyi@ecomdev.org>
  */
 
-class EcomDev_PHPUnitTest_Test_Lib_Mock_Proxy extends PHPUnit_Framework_TestCase
+class EcomDev_PHPUnitTest_Test_Lib_Mock_Proxy extends PHPUnit\Framework\TestCase
 {
     /**
      * @var EcomDev_PHPUnit_Mock_Proxy
@@ -72,7 +72,7 @@ class EcomDev_PHPUnitTest_Test_Lib_Mock_Proxy extends PHPUnit_Framework_TestCase
         $mockInstance = $this->mockProxy->getMockInstance();
 
         $this->assertInstanceOf(
-            'PHPUnit_Framework_MockObject_MockObject',
+            'PHPUnit\Framework\MockObject_MockObject',
             $mockInstance
         );
 
@@ -96,7 +96,7 @@ class EcomDev_PHPUnitTest_Test_Lib_Mock_Proxy extends PHPUnit_Framework_TestCase
     {
         $this->assertAttributeEmpty('mockInstance', $this->mockProxy);
         $this->assertInstanceOf(
-            'PHPUnit_Framework_MockObject_Builder_InvocationMocker',
+            'PHPUnit\Framework\MockObject_Builder_InvocationMocker',
             $this->mockProxy->expects($this->any())->method('compareValues')
         );
         $this->assertAttributeInstanceOf('EcomDev_PHPUnit_AbstractConstraint', 'mockInstance', $this->mockProxy);

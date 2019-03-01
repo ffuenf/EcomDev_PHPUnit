@@ -22,7 +22,7 @@
  *
  */
 abstract class EcomDev_PHPUnit_AbstractConstraint
-    extends PHPUnit_Framework_Constraint
+    extends PHPUnit\Framework\Constraint
 {
     /**
      * Comparator factory
@@ -101,7 +101,7 @@ abstract class EcomDev_PHPUnit_AbstractConstraint
      * @param string $type
      * @param mixed  $expectedValue
      *
-     * @throws PHPUnit_Framework_Exception
+     * @throws PHPUnit\Framework\Exception
      */
     public function __construct($type, $expectedValue = null)
     {
@@ -203,7 +203,7 @@ abstract class EcomDev_PHPUnit_AbstractConstraint
     /**
      * Evaluates value by type.
      *
-     * @see PHPUnit_Framework_Constraint::evaluate()
+     * @see PHPUnit\Framework\Constraint::evaluate()
      *
      * @param  mixed $other Value or object to evaluate.
      * @param  string $description Additional information about the test
@@ -231,7 +231,7 @@ abstract class EcomDev_PHPUnit_AbstractConstraint
      * Generates a failure exception based on exception type
      *
      * (non-PHPdoc)
-     * @see PHPUnit_Framework_Constraint::fail()
+     * @see PHPUnit\Framework\Constraint::fail()
      */
     public function fail($other, $description, \SebastianBergmann\Comparator\ComparisonFailure $comparisonFailure = NULL)
     {
@@ -294,7 +294,7 @@ abstract class EcomDev_PHPUnit_AbstractConstraint
     /**
      * Text reperesentation of constraint
      * (non-PHPdoc)
-     * @see PHPUnit_Framework_SelfDescribing::toString()
+     * @see PHPUnit\Framework\SelfDescribing::toString()
      */
     public function toString()
     {

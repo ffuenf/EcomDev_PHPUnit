@@ -44,11 +44,11 @@ class EcomDev_PHPUnit_Constraint_Layout_Block_Property
      *
      * @param string $blockName
      * @param mixed|null $propertyName
-     * @param PHPUnit_Framework_Constraint $constraint
+     * @param PHPUnit\Framework\Constraint $constraint
      * @param string $type
-     * @throws PHPUnit_Framework_Exception
+     * @throws PHPUnit\Framework\Exception
      */
-    public function __construct($blockName, $propertyName, PHPUnit_Framework_Constraint $constraint,
+    public function __construct($blockName, $propertyName, PHPUnit\Framework\Constraint $constraint,
         $type = self::TYPE_CONSTRAINT)
     {
         if (empty($blockName) || !is_string($blockName)) {
@@ -69,7 +69,7 @@ class EcomDev_PHPUnit_Constraint_Layout_Block_Property
      * Retuns number of constraint assertions
      *
      * (non-PHPdoc)
-     * @see PHPUnit_Framework_Constraint::count()
+     * @see PHPUnit\Framework\Constraint::count()
      */
     public function count()
     {

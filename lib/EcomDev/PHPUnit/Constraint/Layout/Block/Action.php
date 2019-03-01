@@ -76,7 +76,7 @@ class EcomDev_PHPUnit_Constraint_Layout_Block_Action extends EcomDev_PHPUnit_Con
      * @param int|null $invocationCount
      * @param array $arguments
      * @param string $searchType
-     * @throws PHPUnit_Framework_Exception
+     * @throws PHPUnit\Framework\Exception
      */
     public function __construct($blockName, $method, $type, $invocationCount = null,
         array $arguments = null, $searchType = self::SEARCH_TYPE_AND)

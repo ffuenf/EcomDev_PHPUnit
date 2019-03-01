@@ -50,7 +50,7 @@ class EcomDev_PHPUnit_Constraint_Config_Resource
      * @param string $type
      * @param string $moduleDirectory
      * @param mixed $expectedValue
-     * @throws PHPUnit_Framework_Exception
+     * @throws PHPUnit\Framework\Exception
      * @internal param string $nodePath
      */
     public function __construct($moduleName, $type, $moduleDirectory = null, $expectedValue = null)
@@ -228,7 +228,7 @@ class EcomDev_PHPUnit_Constraint_Config_Resource
     /**
      * Custom failure description for showing config related errors
      * (non-PHPdoc)
-     * @see PHPUnit_Framework_Constraint::customFailureDescription()
+     * @see PHPUnit\Framework\Constraint::customFailureDescription()
      */
     protected function customFailureDescription($other)
     {

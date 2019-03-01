@@ -62,7 +62,7 @@ class EcomDev_PHPUnit_Model_Layout
      * Replaces creation of some block by mock object
      *
      * @param string $classAlias
-     * @param PHPUnit_Framework_MockObject_MockObject|PHPUnit_Framework_MockObject_MockBuilder $mock
+     * @param PHPUnit\Framework\MockObject_MockObject|PHPUnit\Framework\MockObject_MockBuilder $mock
      * @return EcomDev_PHPUnit_Model_Layout
      */
     public function replaceBlockCreation($classAlias, $mock)

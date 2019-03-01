@@ -21,7 +21,7 @@
  *
  *
  */
-class EcomDev_PHPUnit_Constraint_Config extends PHPUnit_Framework_Constraint
+class EcomDev_PHPUnit_Constraint_Config extends PHPUnit\Framework\Constraint
 {
     /**
      * Configuration instance
@@ -33,7 +33,7 @@ class EcomDev_PHPUnit_Constraint_Config extends PHPUnit_Framework_Constraint
     /**
      * Configuration constraint
      *
-     * @var PHPUnit_Framework_Constraint
+     * @var PHPUnit\Framework\Constraint
      */
     protected $constraint = null;
 
@@ -41,7 +41,7 @@ class EcomDev_PHPUnit_Constraint_Config extends PHPUnit_Framework_Constraint
      * Creates configuration constraint for config object
      *
      * @param $constraint
-     * @throws PHPUnit_Framework_Exception
+     * @throws PHPUnit\Framework\Exception
      * @internal param \Varien_Simplexml_Config $config
      */
     public function __construct($constraint)
@@ -99,7 +99,7 @@ class EcomDev_PHPUnit_Constraint_Config extends PHPUnit_Framework_Constraint
      * @param string $description
      * @param bool $returnResult
      * @return bool
-     * @see PHPUnit_Framework_Constraint::evaluate()
+     * @see PHPUnit\Framework\Constraint::evaluate()
      */
     public function evaluate($config, $description = '', $returnResult = false)
     {

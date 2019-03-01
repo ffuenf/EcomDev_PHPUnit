@@ -97,7 +97,7 @@ class EcomDev_PHPUnit_Model_Config extends Mage_Core_Model_Config
      *
      * @param string $type
      * @param string $classAlias
-     * @param PHPUnit_Framework_MockObject_MockObject|PHPUnit_Framework_MockObject_MockBuilder $mock
+     * @param PHPUnit\Framework\MockObject_MockObject|PHPUnit\Framework\MockObject_MockBuilder $mock
      * @return EcomDev_PHPUnit_Model_Config
      */
     public function replaceInstanceCreation($type, $classAlias, $mock)

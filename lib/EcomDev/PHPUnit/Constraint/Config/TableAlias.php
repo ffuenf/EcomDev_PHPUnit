@@ -32,7 +32,7 @@ class EcomDev_PHPUnit_Constraint_Config_TableAlias
      * @param string $tableAlias
      * @param string $expectedTableName
      * @param string $type
-     * @throws PHPUnit_Framework_Exception
+     * @throws PHPUnit\Framework\Exception
      */
     public function __construct($tableAlias, $expectedTableName, $type = self::TYPE_TABLE_ALIAS)
     {
@@ -93,7 +93,7 @@ class EcomDev_PHPUnit_Constraint_Config_TableAlias
     /**
      * Custom failure description for showing config related errors
      * (non-PHPdoc)
-     * @see PHPUnit_Framework_Constraint::customFailureDescription()
+     * @see PHPUnit\Framework\Constraint::customFailureDescription()
      */
     protected function customFailureDescription($other)
     {

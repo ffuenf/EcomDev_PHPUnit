@@ -50,7 +50,7 @@ class EcomDev_PHPUnit_Constraint_Layout_Handle extends EcomDev_PHPUnit_Constrain
      * @param string $handle layout handle name
      * @param string $type
      * @param string|null $position layout handle position
-     * @throws PHPUnit_Framework_Exception
+     * @throws PHPUnit\Framework\Exception
      */
     public function __construct($handle, $type, $position = null)
     {
