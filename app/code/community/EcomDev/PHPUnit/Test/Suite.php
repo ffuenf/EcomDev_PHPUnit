@@ -18,8 +18,6 @@
 
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
-use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
-
 /**
  * Test suite for Magento
  *
